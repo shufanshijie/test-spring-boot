@@ -27,7 +27,8 @@ public class SampleController {
         return "Hello World!";
     }
     @RequestMapping("/get/{id}")
-    public UserProductAuditStatusFail getById(@PathVariable Long id){
+    @ResponseBody
+    public UserProductAuditStatusFail getById(@PathVariable("id") Long id){
         return service.selectById(id);
     }
 

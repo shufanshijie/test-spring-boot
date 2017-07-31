@@ -3,16 +3,18 @@
  */
 package com.gouhuo.boot;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author shangj
  * @version Application, v0.1 2017/7/31 11:35
  */
 @EnableAutoConfiguration
-@ServletComponentScan
+@SpringBootApplication
+//@MapperScan("com.gouhuo.boot.dao")
 public class Application {
 
     public static void main(String[] args) throws Exception {

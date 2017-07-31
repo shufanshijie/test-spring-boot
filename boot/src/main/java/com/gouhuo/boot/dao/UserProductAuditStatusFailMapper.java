@@ -2,9 +2,11 @@ package com.gouhuo.boot.dao;
 
 import com.gouhuo.boot.pojo.UserProductAuditStatusFail;
 import com.gouhuo.boot.pojo.UserProductAuditStatusFailExample;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
+@Mapper
 public interface UserProductAuditStatusFailMapper {
     int deleteByPrimaryKey(Long id);
 
