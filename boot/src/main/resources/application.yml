@@ -1,0 +1,28 @@
+server.port: 12000
+
+spring:
+  #mysql durid data source
+  datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://172.16.20.205:3306/ao
+      username: finance
+      password: 123456
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      filters: stat,wall,log4j
+      connectionProperties: druid.stat.mergeSql:true;druid.stat.slowSqlMillis:5000
+      useGlobalDataSourceStat: true
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
