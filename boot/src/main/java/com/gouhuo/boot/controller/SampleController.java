@@ -5,6 +5,7 @@ package com.gouhuo.boot.controller;/*
 import com.gouhuo.boot.pojo.UserProductAuditStatusFail;
 import com.gouhuo.boot.service.SampleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,11 +21,13 @@ public class SampleController {
 
     @Autowired
     private SampleService service;
+    @Value("${dispute_s_user_boc_account_status.originTableName}")
+    private String name;
 
     @RequestMapping("/home")
     @ResponseBody
     String home() {
-        return "Hello World!";
+        return "Hello " + name + "!";
     }
     @RequestMapping("/get/{id}")
     @ResponseBody

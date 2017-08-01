@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: ao
+  cloud:
+     config:
+       uri: http://localhost:8888
+#       profile: ${config.profile:DEV}
