@@ -1,0 +1,7 @@
+config:
+  name: world
+server:
+  port: 8888
+
+spring.profiles.active: native
+spring.cloud.config.server.native.searchLocations: file:/home/b2b2p/rebuild
